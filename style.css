@@ -1,11 +1,20 @@
-body { 
-background-color: #999799 !important; 
-
+body {
+  background-color: #999799 !important;
 }
-.header{ 
-    text-align: center; 
+.header {
+  text-align: center;
 }
-button { 
-background-color: #7E912A;  
-
+button {
+  background-color: #7e912a;
+  height: 100%;
+  width: 100%;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+h1 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
