@@ -21,6 +21,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet"> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
@@ -43,13 +47,15 @@
 
       <!-- player options here -->
       <div class="row my-3">
-        <div class="col-sm-8">(your selection shows up here)</div>
+        <!-- madlib stuff here -->
+        <div class="col-sm-8" id="username"><h1></h1><img id="icons"></div>
+        <!-- it ends here-->
         <div class="col-sm-4">(computer selection shows up here)</div>
       </div>
       <div class="row">
-        <div class="col-sm"><button><img src="scissorscartoon1-removebg-preview.png"></button></div>
-        <div class="col-sm"><button><img src="rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png"></button></div>
-        <div class="col-sm"><button><img src="paper1-removebg-preview.png"></button></div>
+        <div class="col-sm"><button onclick="scissors()"><img src="scissorscartoon1-removebg-preview.png"></button></div>
+        <div class="col-sm"><button onclick="rock()"><img src="rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png"></button></div>
+        <div class="col-sm"><button onclick="paper()"><img src="paper1-removebg-preview.png"></button></div>
       </div>
       <!-- player options END -->
 
