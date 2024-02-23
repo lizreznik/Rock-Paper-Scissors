@@ -24,7 +24,7 @@ function paper() {
 // code academy JS START // 
 const getUserChoice = userInput => { 
   userInput = userInput.toLowerCase();
-  if(userInput === 'rock' || userInput === 'scissors' || userInput === 'paper' || userInput === 'bomb') {
+  if(userInput === 'rock' || userInput === 'scissors' || userInput === 'paper') {
       return userInput;
   } else { 
       console.log('Error, please type: rock, paper, or scissors.')
@@ -70,20 +70,8 @@ const getUserChoice = userInput => {
         return "Congratulations, you won!";
       }
     }
-
-    if (userChoice === 'bomb') { 
-      return 'Congratulations, you won!';
-    }
   };
 
-  const playGame = () => {
-    const userChoice = getUserChoice('bomb');
-    const computerChoice = getComputerChoice();
-    console.log('You threw: ' + userChoice);
-    console.log('The computer threw ' + computerChoice);
-
-    console.log(determineWinner(userChoice, computerChoice));
-  };
 
   playGame()
   // code academy JS END //
