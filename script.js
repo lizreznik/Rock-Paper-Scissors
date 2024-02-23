@@ -5,7 +5,7 @@ let name = `${userName}`;
 
 let usernameDiv = document.getElementById('username');
 
-usernameDiv.innerHTML = `<p> User:${userName}</p>`;
+usernameDiv.innerHTML = `<p> User: ${userName}</p>`;
 // madLib END //
 
 // functions START //
