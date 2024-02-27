@@ -35,28 +35,35 @@
       </div>
       <!-- scoreboard here -->
       <div class="row">
-        <div class="col-sm-6" id="your-score">Your Score: </div>
-        <div class="col-sm-6" id="computer-score">Computer Score: </div>
+        <div class="col-sm-6" id="your-score">Your Score:0 </div>
+        <div class="col-sm-6" id="computer-score">Computer Score:0 </div>
       </div>
       <!-- scoreboard END -->
 
       <!-- player options here -->
       <div class="row my-3">
-        <!-- madlib stuff here -->
-        <div class="col-sm-8" id="username">
-          <p></p><img id="icons">
+        <div class="col-sm-6" id="username">
+
         </div>
-        <!-- it ends here-->
-        <div class="col-sm-4">(computer selection shows up here)</div>
-      </div>
-      <div class="row">
-        <div class="col-sm"><button onclick="scissors()"><img src="scissorscartoon1-removebg-preview.png"></button>
+        <div class="col-sm-6">
+          <img id="userIcon" src="scissorscartoon1-removebg-preview.png" />
         </div>
-        <div class="col-sm"><button onclick="rock()"><img
-              src="rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png"></button></div>
-        <div class="col-sm"><button onclick="paper()"><img src="paper1-removebg-preview.png"></button></div>
+
+        <div class="col-sm-6">
+          <img id="compIcon" src="scissorscartoon1-removebg-preview.png" />
+        </div>
       </div>
-      <!-- player options END -->
+    </div>
+
+    <div class="row">
+      <div class="col-sm"><button onclick="playGame('scissors')"><img
+            src="scissorscartoon1-removebg-preview.png"></button>
+      </div>
+      <div class="col-sm"><button onclick="playGame('rock')"><img
+            src="rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png"></button></div>
+      <div class="col-sm"><button onclick="playGame('paper')"><img src="paper1-removebg-preview.png"></button></div>
+    </div>
+    <!-- player options END -->
 
   </main>
   <footer class="text-white text-center py-2 fixed-bottom">
@@ -75,7 +82,7 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

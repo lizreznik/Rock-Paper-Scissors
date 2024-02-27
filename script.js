@@ -5,73 +5,121 @@ let name = `${userName}`;
 
 let usernameDiv = document.getElementById('username');
 
+let userChoiceIcon = document.getElementById("userIcon")
+let compChoiceIcon = document.getElementById("compIcon")
+
 usernameDiv.innerHTML = `<p> User: ${userName}</p>`;
+
+
 // madLib END //
 
 // functions START //
-function rock() {
-  document.getElementById("icons").src = 'rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png'
-}
+function playGame(selection) {
 
-function scissors() {
-  document.getElementById("icons").src = 'scissorscartoon1-removebg-preview.png'
-}
-
-function paper() {
-  document.getElementById("icons").src = 'paper1-removebg-preview.png'
-}
-
-// code academy JS START // 
-const getUserChoice = userInput => { 
-  userInput = userInput.toLowerCase();
-  if(userInput === 'rock' || userInput === 'scissors' || userInput === 'paper') {
-      return userInput;
-  } else { 
-      console.log('Error, please type: rock, paper, or scissors.')
-    }
+  //get User Selection and update iamge on site
+  if (selection === 'rock') {
+    userChoiceIcon.src = 'rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png'
+  } else if (selection === 'paper') {
+    userChoiceIcon.src = 'paper1-removebg-preview.png'
+  }
+  else if (selection === 'scissors') {
+    userChoiceIcon.src = 'scissorscartoon1-removebg-preview.png'
   }
 
-  const getComputerChoice = () => { 
+  //get Computer Selection & Update computer Choice on site
+
+
   const randomNumber = Math.floor(Math.random() * 3);
+  let computerChoice
+
+
   switch (randomNumber) {
-    case 0: 
-    return 'rock';
-    case 1: 
-    return 'paper';
-    case 2: 
-    return 'scissors';
+    case 0:
+      compChoiceIcon.src = 'rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png';
+
+      return ;
+    case 1: compChoiceIcon.src = 'paper1-removebg-preview.png'
+    return ;
+    case 2:
+      compChoiceIcon.src = 'scissorscartoon1-removebg-preview.png'
+      return ;
   }
-  };
-
-  const determineWinner = (userChoice, computerChoice) => { 
-    if (userChoice === computerChoice) { 
-      return 'This game is a tie!';
-    }
-    if (userChoice === 'rock') {
-      if (computerChoice === 'paper') { 
-        return "Sorry, computer won!";
-      } else { 
-        return "Congratulations, you won!";
-      }
-    }
-
-    if (userChoice === 'paper') {
-      if (computerChoice === 'scissors') { 
-        return "Sorry, computer won!";
-      } else { 
-        return "Congratulations, you won!";
-      }
-    }
-
-  if (userChoice === 'scissors') {
-      if (computerChoice === 'rock') { 
-        return "Sorry, computer won!";
-      } else { 
-        return "Congratulations, you won!";
-      }
-    }
-  };
+  
 
 
-  playGame()
-  // code academy JS END //
+
+
+
+ 
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // code academy JS START // 
+
+// let roundsplayed = 0
+// let playerscore = 0
+// let computerscore = 0
+
+
+// const getComputerChoice = () => {
+//   const randomNumber = Math.floor(Math.random() * 3);
+//   switch (randomNumber) {
+//     case 0:
+//       return 'rock';
+//     case 1:
+//       return 'paper';
+//     case 2:
+//       return 'scissors';
+//   }
+// };
+
+// function determineWinner(userChoice) {
+
+//   const determineWinner = (userChoice, computerChoice) => {
+//     if (userChoice === computerChoice) {
+//       return 'This game is a tie!';
+//     }
+//     if (userChoice === userChoice(rock)) {
+//       if (computerChoice === 'paper') {
+//         return "Sorry, computer won!";
+//       } else {
+//         return "Congratulations, you won!";
+//       }
+//     }
+
+//     if (userChoice === userChoice(paper)) {
+//       if (computerChoice === 'scissors') {
+//         return "Sorry, computer won!";
+//       } else {
+//         return "Congratulations, you won!";
+//       }
+//     }
+
+//     if (userChoice === userChoice(scissors)) {
+//       if (computerChoice === 'rock') {
+//         return "Sorry, computer won!";
+//       } else {
+//         return "Congratulations, you won!";
+//       }
+//     }
+//   };
+// };
+
+
+
+// // code academy JS END //
