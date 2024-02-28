@@ -8,7 +8,7 @@ let usernameDiv = document.getElementById('username');
 let userChoiceIcon = document.getElementById("userIcon")
 let compChoiceIcon = document.getElementById("compIcon")
 
-usernameDiv.innerHTML = `<p> User: ${userName}</p>`;
+usernameDiv.innerHTML = `<p> ${userName} Score:</p>`;
 
 
 // madLib END //
