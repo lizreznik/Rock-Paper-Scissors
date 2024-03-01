@@ -4,11 +4,17 @@ let userName = prompt('Enter username:');
 let name = `${userName}`;
 
 let usernameDiv = document.getElementById('username');
+let displayMessage = document.getElementById('displayMessage')
 
 let userChoiceIcon = document.getElementById("userIcon")
 let compChoiceIcon = document.getElementById("compIcon")
 
-usernameDiv.innerHTML = `<p> ${userName} Score:</p>`;
+let computerChoice
+let userChoice
+
+let userscore = 
+
+usernameDiv.innerHTML = `<p> ${userName} Score: ${userScore}</p>`;
 
 
 // madLib END //
@@ -19,11 +25,14 @@ function playGame(selection) {
   //get User Selection and update iamge on site
   if (selection === 'rock') {
     userChoiceIcon.src = 'rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png'
+    userChoice = 'rock'
   } else if (selection === 'paper') {
     userChoiceIcon.src = 'paper1-removebg-preview.png'
+    userChoice = 'paper'
   }
   else if (selection === 'scissors') {
     userChoiceIcon.src = 'scissorscartoon1-removebg-preview.png'
+    userChoice = 'scissors'
   }
 
   //get Computer Selection & Update computer Choice on site
@@ -36,21 +45,56 @@ function playGame(selection) {
   switch (randomNumber) {
     case 0:
       compChoiceIcon.src = 'rock-stone-boulders-cartoon-isometric-vector-35351659-removebg-preview.png';
-
-      return ;
+      computerChoice = 'rock'
+      break;
     case 1: compChoiceIcon.src = 'paper1-removebg-preview.png'
-    return ;
+      computerChoice = 'paper'
+      break;
     case 2:
       compChoiceIcon.src = 'scissorscartoon1-removebg-preview.png'
-      return ;
+      computerChoice = 'scissors'
+      break;
   }
-  
+
+
+
+  //Evaluate Winner/loser and update score
+console.log('Here!!!')
+  if (userChoice === computerChoice){
+      displayMessage.textContent = 'Yikes! You tied! Try again.'
+  } else if (userChoice === 'rock' && computerChoice === 'scissors' || userChoice === 'paper' && computerChoice === 'rock' || userChoice === 'scissors' && computerChoice === 'paper'){
+    displayMessage.textContent = 'Nice job! You won this round!'
+  } else {
+    displayMessage.textContent = 'Womp Womp! You lost... better luck next round!'
+  }
 
 
 
 
+    // reset button
+    function resetForm() {
+      // Replace 'myForm' with the actual ID of your form
+      document.getElementById('your-score').reset();
+      document.getElementById('computer-score').reset();
+      document.getElementById('playGame').reset();
+    }
+//display score update
+    usernameDiv.innerHTML = `<p> ${userName} Score: ${userScore}</p>`;
 
- 
+
+
+
+  //let displayMessage = [
+  //   'NAPS is by far the most significant cultural force of the decade. — New York Times',
+  //   'These days sleeping at your desk is not just acceptable, it’s encouraged. — The Atlantic',
+  //   'NAPS has changed the way people think about sleep, on a grand scale. — Washington Post',
+  //   'Happiness increased 200% since NAPS began promoting siestas. — National Science Review',
+  //   'NAPS has ushered in a new era of sleep. — USA Today',
+  //   'Not surprisingly, more siestas means more productivity. — Wall Street Journal',
+  //   'NAPS is doing the hard work of helping people get the rest they need. — U.S. News'
+  // ]
+
+
 };
 
 
@@ -69,7 +113,7 @@ function playGame(selection) {
 
 
 
-// // code academy JS START // 
+// // code academy JS START //
 
 // let roundsplayed = 0
 // let playerscore = 0
