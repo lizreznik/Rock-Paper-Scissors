@@ -3,7 +3,8 @@ let userName = prompt('Enter username:');
 
 let name = `${userName}`;
 
-let usernameDiv = document.getElementById('username');
+let usernameDiv = document.getElementById('user-score');
+let computerScoreDiv = document.getElementById('computer-score');
 let displayMessage = document.getElementById('displayMessage')
 
 let userChoiceIcon = document.getElementById("userIcon")
@@ -12,7 +13,9 @@ let compChoiceIcon = document.getElementById("compIcon")
 let computerChoice
 let userChoice
 
-let userscore = 
+let userScore = 0;
+let computerScore = 0;
+
 
 usernameDiv.innerHTML = `<p> ${userName} Score: ${userScore}</p>`;
 
@@ -63,10 +66,15 @@ console.log('Here!!!')
   if (userChoice === computerChoice){
       displayMessage.textContent = 'Yikes! You tied! Try again.'
   } else if (userChoice === 'rock' && computerChoice === 'scissors' || userChoice === 'paper' && computerChoice === 'rock' || userChoice === 'scissors' && computerChoice === 'paper'){
-    displayMessage.textContent = 'Nice job! You won this round!'
+    displayMessage.textContent = 'Nice job! You won this round!';
+    userScore = userScore + 1;
   } else {
-    displayMessage.textContent = 'Womp Womp! You lost... better luck next round!'
+    displayMessage.textContent = 'Womp Womp! You lost... better luck next round!';
+    computerScore = computerScore + 1;
   }
+//display score update
+  usernameDiv.innerHTML = `<p> ${userName} Score: ${userScore}</p>`;
+  computerScoreDiv.innerHTML = `<p> Computer Score: ${computerScore}</p>`;
 
 
 
@@ -78,8 +86,7 @@ console.log('Here!!!')
       document.getElementById('computer-score').reset();
       document.getElementById('playGame').reset();
     }
-//display score update
-    usernameDiv.innerHTML = `<p> ${userName} Score: ${userScore}</p>`;
+
 
 
 
