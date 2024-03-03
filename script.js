@@ -79,13 +79,7 @@ console.log('Here!!!')
 
 
 
-    // reset button
-    function resetForm() {
-      // Replace 'myForm' with the actual ID of your form
-      document.getElementById('your-score').reset();
-      document.getElementById('computer-score').reset();
-      document.getElementById('playGame').reset();
-    }
+   
 
 
 
